@@ -1,0 +1,23 @@
+/* 防止元素塌陷 */
+.clearfix::before,
+.clearfix::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+body{
+    font: 12px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+    color: #333;
+    background-color: rgb(234,232,235);
+    min-width: 1226px;
+}
+/* 设置一个类，用来表示中间容器的宽度 */
+.w{
+    width: 1226px;
+    /* 设置容器居中 */
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}

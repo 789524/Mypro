@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>淘宝网</title>
+    <!-- 引入基本样式表 -->
+    <link rel="stylesheet" href="css/base.css">
+    <!-- 引入重置样式表 -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- 引入图标字体 -->
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <!-- 引入自定义样式表 -->
+    <link rel="stylesheet" href="css/index.css">
+    <!-- 引入ui样式表 -->
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <div class="nav">
+        <div class="nav-content" class="clearfix">
+                <ul class="nav-left">
+                 <li id="menu" name="show-hide">
+                中国大陆<i class="iconfont">&#xeb8b;</i>
+                   <!-- 地址的弹出层 -->
+                        <ul id="menu_items">
+                            <li >全球</li>
+                            <li>中国大陆</li>
+                            <li>中国香港</li>
+                            <li>美国</li>
+                            <li>英国</li>
+                            <li>俄罗斯</li>
+                            <li>德国</li>
+                            <li>马来西亚</li>
+                            <li>澳大利亚</li>
+                            <li>新西兰</li>
+                            <li>日本</li>
+                            <li>意大利</li>
+                        </ul>
+                </li>
+                 <li style="color:red;">亲,请登录</li>
+                 <li><a href="javascript:;">免费注册</a></li>
+                 <li><a href="javascript">手机逛淘宝</a></li>
+                 <li><a href="#">网页无障碍</a></li>
+                </ul>
+            <ul class="nav-right">
+                    <li><a href="#">联系客服</a></li>
+                    <li id="qianniu" name="show-hide"><a href="#">千牛卖家中心<i class="iconfont">&#xeb8b;</i></a>
+                         <ul id="qianniu_items">
+                            <li>开店入驻</li>
+                            <li>已卖出的宝贝</li>
+                            <li>出售中的宝贝</li>
+                            <li>卖家服务市场</li>
+                            <li>卖家培训中心</li>
+                            <li>体验中心</li>
+                            <li>电商中心</li>
+                         </ul>
+                    </li>
+                    <li><a>商品分类</a></li>
+                    <li><a>免费开店</a></li>
+                    <li><a href="#"><i class="iconfont">&#xe666;</i>
+                    收藏夹<i class="iconfont">&#xeb8b;</i></a></li>
+                    <li id="shopcart" name="show-hide"><a href="javascript:;"><i style="color:red;"class="iconfont">&#xe601;</i>购物车</a>
+                               <ul id="shopcart_items">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                               </ul>
+                    </li>
+                    <li id="mytao" name="show-hide"><a href="#">我的淘宝<i class="iconfont">&#xeb8b;</i></a>
+                              <ul id="mytao_items">
+                                <li>已买到的宝贝</li>
+                                <li>我的足迹</li>
+                              </ul>
+                    </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 搜索栏 -->
+    <div class="search">
+        <div class="search-content">
+            <!-- 左侧图标 -->
+            <ul class="search-left clearfix">
+                <a href="#" class="logo"></a>
+            </ul>
+            <!-- 中间搜索框 -->
+            <ul id="search-inp" class="clearfix">
+                <input type="text" id="s-input"/>
+                <i class="iconfont">&#xeb8b;|</i>
+                <button id="search-btn">搜索</button>
+            </ul>
+            <!-- 右侧二维码 -->
+            <ul class="search-right clearfix">
+                <a href="" class="s-img"><span>下载淘宝</span>
+                    <img src="img/download.png" alt=""></a>
+                
+            </ul>
+        </div>
+    </div>
+    <!-- 主体部分 -->
+    <div class="shop w">
+        <div class="shop-content clearfix">
+        <!--左侧分类  -->
+        <div class="shop-left clearfix">
+               <h2>分类</h2>
+               <ul class="shop-card">
+                <li class="card-hover">
+                    <i class="iconfont">&#xe60f;</i>
+                    <a href="">女装</a>
+                     <span>/</span>
+                     <a href="">内衣</a>
+                     <span>/</span>
+                     <a href="">奢品</a>
+                </li>
+                <li class="card-hover">
+                    <i class="iconfont">&#xe608;</i>
+                    <a href="">女鞋</a>
+                     <span>/</span>
+                     <a href="">男鞋</a>
+                     <span>/</span>
+                     <a href="">箱包</a>
+                </li>
+                <li class="card-hover">
+                    <i class="iconfont">&#xe60e;</i>
+                    <a href="">男装</a>
+                     <span>/</span>
+                     <a href="">运动</a>
+                     <span>/</span>
+                     <a href="">百货</a>
+                </li>
+                <li class="card-hover">
+                    <i class="iconfont">&#xe692;</i>
+                    <a href="">手机</a>
+                     <span>/</span>
+                     <a href="">数码</a>
+                     <span>/</span>
+                     <a href="">企业礼品</a>
+                </li>
+                <li class="card-hover">
+                    <i class="iconfont">&#xe61b;</i>
+                    <a href="">家装</a>
+                     <span>/</span>
+                     <a href="">电器</a>
+                     <span>/</span>
+                     <a href="">车品</a>
+                </li>
+                <li class="card-hover">
+                    <i class="iconfont">&#xe7c7;</i>
+                    <a href="">食品</a>
+                     <span>/</span>
+                     <a href="">生鲜</a>
+                     <span>/</span>
+                     <a href="">母婴</a>
+                </li>
+                <li class="card-hover">
+                    <i class="iconfont">&#xe615;</i>
+                    <a href="">医药</a>
+                     <span>/</span>
+                     <a href="">保健</a>
+                     <span>/</span>
+                     <a href="">进口</a>
+                </li>
+               </ul>
+        </div>
+        <!-- 顶部导航 -->
+        <div class="shop-nav clearfix">
+            <ul class="shop-nav-list">
+                <li >
+                  <a href="" style="color: #ff0036;">天猫</a>
+                </li>
+                <li><a href="" style="color: #ff0036;">聚划算</a></li>
+                <li><a href="" style="color: #33c900;">天猫超市</a></li>
+                <li><a href="">司法拍卖</a></li>
+                <li><a href="">飞猪旅行</a></li>
+                <li><a href="">天天特卖</a></li>
+                <li><a href="">极有家</a></li>
+                <li><a href="">淘宝直播</a></li>
+                
+            </ul>
+            <!-- 中间轮播图 -->
+           <div id="container">
+            <div id="list" style="left: -630px;">
+                <img src="img/5.jpg" alt="5"/>
+                <img src="img/1.png" alt="1"/>
+                <img src="img/2.jpg" alt="2"/>
+                <img src="img/3.jpg" alt="3"/>
+                <img src="img/4.jpg" alt="4"/>
+                <img src="img/5.jpg" alt="5"/>
+                <img src="img/1.png" alt="1"/>
+               
+            </div>
+            <div id="pointsDiv">
+                <span index="1" class="on"></span>
+                <span index="2"></span>
+                <span index="3"></span>
+                <span index="4"></span>
+                <span index="5"></span>
+            </div>
+            <a href="javascript:;" id="prev" class="arrow"><i class="iconfont">&#xe659;</i></a>
+            <a href="javascript:;" id="next" class="arrow"><i class="iconfont">&#xe658;</i></a>
+           </div>
+         <!-- 右侧商家部分 -->
+         <div class="shopman">
+            <!-- 用户 -->
+              <div class="user">
+                <a href="">
+                    <img src="img/60.jpg" alt="">
+                </a>
+                <span>Hi!&nbsp; 你好!</span>
+
+              </div>
+              <!-- 用户登录 -->
+              <div class="m-user">
+                  <div class="m-user-list">
+                    <a href="" class="btn_login">登录</a>
+                    <a href="" class="btn_register">注册</a>
+                    <a href="" class="btn_open">开店</a>
+                  </div>
+              </div>
+              <!-- 用户详情 -->
+              <div class="user-info">
+                <div class="user-list">
+                    <a href="#">
+                        <span class="iconfont" id="user-icon">&#xeca7;</span>
+                        <p>宝贝收藏</p>
+                    </a>
+                    <a href="#">
+                        <span class="iconfont">&#xe736;</span>
+                        <p style="font-size:12px;">买过的店</p>
+                    </a>
+                    <a href="#">
+                        <span class="iconfont">&#xe767;</span>
+                        <p>收藏的店</p>
+                    </a>
+                    <a href="#">
+                        <span class="iconfont">&#xe631;</span>
+                        <p>我的足迹</p>
+                    </a>
+                </div>
+                
+              </div>
+              <div></div>
+         </div>
+        </div>
+        <!-- 内容部分 -->
+        <div class="content w">
+            <div class="con-list">
+                <h3 class="header">
+                    <span class="title">猜你喜欢</span>
+                    <img class="img" src="img/30.png" alt="">
+                </h3>
+                <div class="con-list1 clearfix">
+                    <div class="con-list1-item w">
+                        <a href="#">
+                            <div class="img-wrapper">
+                                <img src="img/feizaohe.webp.jpg" alt="">
+        
+                            </div>
+                            <div class="info-wrapper">
+                                <div class="info-title">
+                                    <img src="img/42.png" alt="">肥皂盒带盖学生宿舍澡堂用密封旅行便携式沥水创意个性可爱香皂盒
+                                </div>
+                                <div class="tag-list"></div>
+                            </div>
+                            <div class="price-wrapper">
+                                <span class="price-value">
+                                    ￥3.5
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="con-list1-item w">
+                        <a href="#">
+                            <div class="img-wrapper">
+                                <img src="img/yusan.webp.jpg" alt="">
+                            </div>
+                            <div class="info-wrapper">
+                                <div class="info-title">
+                                    <img src="img/42.png" alt="">小清新晴雨两用全自动可定制太阳伞黑胶三折纯色双层防晒ins女伞
+                                </div>
+                                <div class="tag-list"></div>
+                            </div>
+                            <div class="price-wrapper">
+                                <span class="price-value">
+                                    ￥8.9
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="con-list1-item w">
+                        <a href="#">
+                            <div class="img-wrapper">
+                                <img src="img/yurongfu.webp.jpg" alt="">
+        
+                            </div>
+                            <div class="info-wrapper">
+                                <div class="info-title">
+                                    <img src="img/43.png" alt="">PSO Brand 白鸭绒立领羽绒服男短款冬季加绒加厚潮牌情侣外套保暖
+                                </div>
+                                <div class="tag-list"></div>
+                            </div>
+                            <div class="price-wrapper">
+                                <span class="price-value">
+                                    ￥799
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="con-list1-item w">
+                        <a href="#">
+                            <div class="img-wrapper">
+                                <img src="img/jiayonchuangdian.webp.jpg" alt="">
+        
+                            </div>
+                            <div class="info-wrapper">
+                                <div class="info-title">
+                                    <img src="img/43.png" alt="">海马天然全山棕床垫硬垫手工棕榈床垫棕垫薄款椰棕垫加硬可定制
+                                </div>
+                                <div class="tag-list"></div>
+                            </div>
+                            <div class="price-wrapper">
+                                <span class="price-value">
+                                    ￥1308
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="con-list1-item w">
+                        <a href="#">
+                            <div class="img-wrapper">
+                                <img src="img/xiyiye.webp.jpg" alt="">
+        
+                            </div>
+                            <div class="info-wrapper">
+                                <div class="info-title">
+                                    <img src="img/42.png" alt="">超能洗衣液袋装补充替换装家庭用实惠装低泡天然皂液手洗机洗正品
+                                </div>
+                                <div class="tag-list"></div>
+                            </div>
+                            <div class="price-wrapper">
+                                <span class="price-value">
+                                    ￥39
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="con-list1-item w">
+                        <a href="#">
+                            <div class="img-wrapper">
+                                <img src="img/jiake.webp.jpg" alt="">
+        
+                            </div>
+                            <div class="info-wrapper">
+                                <div class="info-title">
+                                    <img src="img/43.png" alt="">男士夹克外套春秋季韩版潮流ins百搭早秋衣服男装一套装搭配帅气L
+                                </div>
+                                <div class="tag-list"></div>
+                            </div>
+                            <div class="price-wrapper">
+                                <span class="price-value">
+                                    ￥58.9
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="con-list1-item w">
+                        <a href="#">
+                            <div class="img-wrapper">
+                                <img src="img/yaoyaoche.webp.jpg" alt="">
+        
+                            </div>
+                            <div class="info-wrapper">
+                                <div class="info-title">
+                                    <img src="img/43.png" alt="">宜库高景观婴儿推车可坐可躺轻便简易折叠减震双向新生儿童宝宝车
+                                </div>
+                                <div class="tag-list">
+                                    <div class="tag-item" style="color: #FF5000; border-color: #FAB596; background: #FFFFFF"
+                                        data-spm-anchor-id="a21bo.jianhua.201876.i7.47c611d9q30pgP">送运费险</div>
+                                </div>
+                            </div>
+                            <div class="price-wrapper">
+                                <span class="price-value">
+                                    ￥338
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="con-list1-item w">
+                        <a href="#">
+                            <div class="img-wrapper">
+                                <img src="img/chouzhi.webp.jpg" alt="">
+        
+                            </div>
+                            <div class="info-wrapper">
+                                <div class="info-title">
+                                    <img src="img/43.png" alt="">抽纸家用实惠装纸巾纸抽餐巾纸整箱30包
+                                </div>
+                                <div class="tag-list"></div>
+                            </div>
+                            <div class="price-wrapper">
+                                <span class="price-value">
+                                    ￥29.99
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="con-list1-item w">
+                        <a href="#">
+                            <div class="img-wrapper">
+                                <img src="img/baowenbei.webp.jpg" alt="">
+        
+                            </div>
+                            <div class="info-wrapper">
+                                <div class="info-title">
+                                    <img src="img/43.png" alt="">奥克斯婴儿恒温调奶器热水壶智能自动保温奶暖奶器家用多功能配件
+                                </div>
+                                <div class="tag-list">
+                                    <div class="tag-item" style="color: #FF5000; border-color: #FAB596; background: #FFFFFF">
+                                        送运费险</div>
+                                </div>
+                            </div>
+                            <div class="price-wrapper">
+                                <span class="price-value">
+                                    ￥19
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="con-list1-item w">
+                        <a href="#">
+                            <div class="img-wrapper">
+                                <img src="img/yanjing.webp.jpg" alt="">
+        
+                            </div>
+                            <div class="info-wrapper">
+                                <div class="info-title">
+                                    <img src="img/43.png" alt="">优瞳隐形眼镜月抛初零感学生近视透明高清透氧4片/8片非美瞳日抛
+                                </div>
+                                <div class="tag-list">
+                                    <div class="tag-item" style="color: #FF5000; border-color: #FAB596; background: #FFFFFF">
+                                        送运费险</div>
+                                </div>
+                            </div>
+                            <div class="price-wrapper">
+                                <span class="price-value">
+                                    ￥99.9
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="con-list1-item w">
+                        <a href="#">
+                            <div class="img-wrapper">
+                                <img src="img/jiayonhmitong.webp.jpg" alt="">
+        
+                            </div>
+                            <div class="info-wrapper">
+                                <div class="info-title">
+                                    <img src="img/43.png" alt="">家用米桶50斤装米缸密封储米箱20斤防虫防潮大米收纳盒面粉储存罐
+                                </div>
+                                <div class="tag-list">
+                                    <div class="tag-item" style="color: #FF5000; border-color: #FAB596; background: #FFFFFF">
+                                        送运费险</div>
+                                </div>
+                            </div>
+                            <div class="price-wrapper">
+                                <span class="price-value">
+                                    ￥99.9
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="con-list1-item w">
+                        <a href="#">
+                            <div class="img-wrapper">
+                                <img src="img/yishwngjun.webp.jpg" alt="">
+        
+                            </div>
+                            <div class="info-wrapper">
+                                <div class="info-title">
+                                    <img src="img/43.png" alt="">益生菌大人增肥增胖男性调理产品增重食品长胖瘦人快速肠胃驼乳片
+                                </div>
+                                <div class="tag-list">
+                                    <div class="tag-item" style="color: #FF5000; border-color: #FAB596; background: #FFFFFF">
+                                        送运费险</div>
+                                </div>
+                            </div>
+                            <div class="price-wrapper">
+                                <span class="price-value">
+                                    ￥49.9
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="con-list1-item w">
+                        <a href="#">
+                            <div class="img-wrapper">
+                                <img src="img/xiangshui.webp.jpg" alt="">
+        
+                            </div>
+                            <div class="info-wrapper">
+                                <div class="info-title">
+                                    <img src="img/43.png" alt="">抢先加购CHANEL香奈儿嘉柏丽尔发香雾发香喷雾花香调
+                                </div>
+                                <div class="tag-list">
+                                </div>
+                            </div>
+                            <div class="price-wrapper">
+                                <span class="price-value">
+                                    ￥488
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="con-list1-item w">
+                        <a href="#">
+                            <div class="img-wrapper">
+                                <img src="img/摄像头.webp.jpg" alt="">
+        
+                            </div>
+                            <div class="info-wrapper">
+                                <div class="info-title">
+                                    <img src="img/43.png" alt="">无线360度摄像头无死角室外摄影手机远程室内高清夜视家用监控器
+                                </div>
+                                <div class="tag-list">
+                                    <div class="tag-item" style="color: #FF5000; border-color: #FAB596; background: #FFFFFF">
+                                        送运费险</div>
+                                </div>
+                            </div>
+                            <div class="price-wrapper">
+                                <span class="price-value">
+                                    ￥95
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="con-list1-item w">
+                        <a href="#">
+                            <div class="img-wrapper">
+                                <img src="img/huazhaungpin.webp.jpg" alt="">
+        
+                            </div>
+                            <div class="info-wrapper">
+                                <div class="info-title">
+                                    <img src="img/43.png" alt="">天猫U先试用入口 积雪草六件套盒补水保湿清爽控油多肽护肤品套装
+                                </div>
+                                <div class="tag-list">
+                                    <div class="tag-item" style="color: #FF5000; border-color: #FAB596; background: #FFFFFF">
+                                        送运费险</div>
+                                </div>
+                            </div>
+                            <div class="price-wrapper">
+                                <span class="price-value">
+                                    ￥27.9
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+     <!-- 固定工具栏 -->
+     <div class="tb-tools">
+        <div class="tb-tools-lists">
+            <div class="im-entry">
+                <div class="im-top">
+                    <img src="img/message.png" alt="">
+                </div>
+                <div class="im-bottom">消息</div>
+            </div>
+            <div class="im-entry">
+                <div class="im-top">
+                    <img src="img/kefu.png" alt="">
+                </div>
+                <div class="im-bottom">官方客服</div>
+            </div>
+            <div class="im-entry">
+                <div class="im-top">
+                    <img src="img/fankui.png" alt="">
+                </div>
+                <div class="im-bottom">反馈</div>
+            </div>
+            <div class="im-entry">
+                <div class="im-top">
+                    <img src="img/jubao.png" alt="">
+                </div>
+                <div class="im-bottom">举报</div>
+            </div>
+            <div class="im-entry">
+                <div class="im-top" id="back">
+                    <img src="img/back.png" alt="">
+                </div>
+                <div class="im-bottom" >回顶部</div>
+            </div>
+        </div>
+     </div>
+     <!-- 页脚部分 -->
+     <div id="footer">
+        <div class="foot-part clearfix">
+            <div class="f1">
+                <a href="javascript:;"  class="f-item">关于本站</a>
+                <a href="javascript:;"  class="f-item">服务协议</a>
+                <a href="javascript:;"  class="f-item">意见反馈</a>
+                <a href="javascript:;"  class="f-item">京公网安备 11000002000001号</a>
+                <a href="javascript:;"  class="f-item">京ICP证030173号</a>
+                <span class="f-item">违法和不良信息举报电话:400-921-6911</span>
+
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/jquery-ui.js"></script>
+   
+    <script type="text/javascript">
+         var dataSource = [
+	"男装",
+	"女装",
+	"童装",
+	"淘宝精选",
+	"热卖商品",
+	"球鞋",
+	"箱包",
+	"洗护",
+    "手机",
+    "男鞋",
+    "手表",
+    "数码产品"
+];
+$( "#s-input" ).autocomplete({
+	source: dataSource  //数据源
+});
+
+    </script>
+</body>
+</html>
